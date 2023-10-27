@@ -14,6 +14,7 @@
 </template>
 
 <script lang="ts">
+import 'artalk/dist/Artalk.css'
 import { useAppStore } from '@/stores/app'
 import { computed, defineComponent, onMounted, toRefs, watch } from 'vue'
 import { MainTitle } from '@/components/Title'
@@ -22,6 +23,8 @@ import { twikooInit } from '@/utils/comments/twikoo-api'
 import { githubInit } from '@/utils/comments/github-api'
 import { valineInit } from '@/utils/comments/valine-api'
 import { walineInit } from '@/utils/comments/waline-api'
+import app from "@/App.vue";
+import {artalkInit} from "@/utils/comments/artalk-api";
 
 export default defineComponent({
   name: 'ObComment',
@@ -155,6 +158,11 @@ export default defineComponent({
           wordLimit,
           imageUploader,
           pageSize
+        })
+      } else if (appStore.themeConfig.plugins.artalk.enable) {
+        artalkInit({
+          server: appStore.themeConfig.plugins.artalk.server,
+          site: appStore.themeConfig.plugins.artalk.site
         })
       }
     }

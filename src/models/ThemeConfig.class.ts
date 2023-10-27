@@ -589,6 +589,12 @@ export class Plugins implements PluginsData {
     pageSize: 10,
     commentSorting: 'latest'
   }
+  artalk = {
+    enable: false,
+    site: '',
+    server: '',
+    recentComment: false
+  }
   recent_comments = false
   busuanzi = {
     enable: true

@@ -1,16 +1,17 @@
 {
-  "name": "hexo-theme-aurora",
-  "version": "0.0.0-semantic-release",
-  "description": "Futuristic auroral theme for Hexo.",
-  "author": "Benny Guo <bennyxguo6@gmail.com>",
+  "name": "hexo-theme-aurora-artalk",
+  "version": "2.5.2",
+  "description": "Futuristic auroral theme for Hexo with artalk.",
+  "author": "Rod <rod_work@126.com>",
   "license": "MIT",
-  "repository": "https://github.com/auroral-ui/hexo-theme-aurora",
+  "repository": "https://github.com/rodzrk/hexo-theme-aurora-artalk.git",
   "keywords": [
     "hexo",
     "hexo-theme",
     "aurora",
     "auroral-ui",
-    "blog"
+    "blog",
+    "artalk"
   ],
   "files": [
     "data/**",
@@ -30,6 +31,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "artalk": "^2.6.4",
     "axios": "^1.5.0",
     "js-cookie": "^3.0.5",
     "normalize.css": "^8.0.1",

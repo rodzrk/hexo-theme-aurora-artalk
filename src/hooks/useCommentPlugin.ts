@@ -49,6 +49,12 @@ export default function useCommentPlugin() {
       return res
     }
 
+    if (!!plugins.artalk.enable && !!plugins.waline.recentComment) {
+      res.plugin = 'artalk'
+      res.recentComment = !!plugins.artalk.recentComment
+      return res
+    }
+
     return res
   })
 
